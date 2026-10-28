@@ -1,0 +1,12 @@
+{
+  "domain": "trelleborg_avfall",
+  "name": "Trelleborg Kretslopp och Vatten",
+  "codeowners": ["@redtooth86"],
+  "config_flow": true,
+  "documentation": "https://github.com/redtooth86/ha-trelleborg-avfall",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/redtooth86/ha-trelleborg-avfall/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

@@ -1,0 +1,138 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Trelleborg Kretslopp och Vatten",
+        "description": "Ange anläggningens adress, t.ex. \"Östergatan 42 ANDERSLÖV\". Därefter lägger du in kärlen enligt ditt abonnemang. Uppgifterna finns på Mina sidor hos Trelleborgs kommun.",
+        "data": {
+          "address": "Anläggning (adress)"
+        }
+      },
+      "bin_type": {
+        "title": "Välj typ av kärl",
+        "data": {
+          "bin_type": "Typ av kärl"
+        }
+      },
+      "bin": {
+        "title": "Kärl {count}",
+        "description": "Fyll i när kärlet töms. Värdena är förifyllda enligt Trelleborgs vanliga abonnemang men kan ändras.",
+        "data": {
+          "name": "Namn",
+          "reference_date": "Ett tömningsdatum",
+          "interval_weeks": "Tömningsintervall",
+          "season_start_week": "Säsong startar (vecka)",
+          "season_end_week": "Säsong slutar (vecka)",
+          "exclude_dates": "Inställda tömningar",
+          "extra_dates": "Extra tömningar"
+        },
+        "data_description": {
+          "reference_date": "Välj en dag då kärlet töms (t.ex. senaste eller nästa tömning). Veckodag och rytm räknas ut från detta datum.",
+          "interval_weeks": "Antal veckor mellan tömningarna, t.ex. 2 för var 14:e dag eller 4 för var 4:e vecka.",
+          "season_start_week": "Lämna tomt om kärlet töms hela året. Trädgårdsavfall i Trelleborg: v.12–47.",
+          "season_end_week": "Lämna tomt om kärlet töms hela året. Trädgårdsavfall i Trelleborg: v.12–47.",
+          "exclude_dates": "Datum (ÅÅÅÅ-MM-DD) då ordinarie tömning inte sker, t.ex. vid helgdagar. Separera med kommatecken.",
+          "extra_dates": "Datum (ÅÅÅÅ-MM-DD) för extra eller flyttade tömningar. Separera med kommatecken."
+        }
+      },
+      "more": {
+        "title": "Fler kärl?",
+        "description": "Tillagda kärl: {bins}",
+        "menu_options": {
+          "bin_type": "Lägg till kärl",
+          "finish": "Klar"
+        }
+      }
+    },
+    "error": {
+      "invalid_date": "Ogiltigt datum.",
+      "invalid_date_list": "Ange datum som ÅÅÅÅ-MM-DD separerade med kommatecken.",
+      "season_incomplete": "Ange både start- och slutvecka för säsongen, eller lämna båda tomma.",
+      "name_required": "Fältet får inte vara tomt."
+    },
+    "abort": {
+      "already_configured": "Anläggningen är redan tillagd."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Hantera kärl",
+        "menu_options": {
+          "add_bin": "Lägg till kärl",
+          "select_edit": "Ändra kärl",
+          "remove_bin": "Ta bort kärl"
+        }
+      },
+      "add_bin": {
+        "title": "Välj typ av kärl",
+        "data": {
+          "bin_type": "Typ av kärl"
+        }
+      },
+      "select_edit": {
+        "title": "Ändra kärl",
+        "data": {
+          "id": "Kärl"
+        }
+      },
+      "bin": {
+        "title": "Kärl",
+        "description": "Fyll i när kärlet töms. Värdena är förifyllda enligt Trelleborgs vanliga abonnemang men kan ändras.",
+        "data": {
+          "name": "Namn",
+          "reference_date": "Ett tömningsdatum",
+          "interval_weeks": "Tömningsintervall",
+          "season_start_week": "Säsong startar (vecka)",
+          "season_end_week": "Säsong slutar (vecka)",
+          "exclude_dates": "Inställda tömningar",
+          "extra_dates": "Extra tömningar"
+        },
+        "data_description": {
+          "reference_date": "Välj en dag då kärlet töms (t.ex. senaste eller nästa tömning). Veckodag och rytm räknas ut från detta datum.",
+          "interval_weeks": "Antal veckor mellan tömningarna, t.ex. 2 för var 14:e dag eller 4 för var 4:e vecka.",
+          "season_start_week": "Lämna tomt om kärlet töms hela året. Trädgårdsavfall i Trelleborg: v.12–47.",
+          "season_end_week": "Lämna tomt om kärlet töms hela året. Trädgårdsavfall i Trelleborg: v.12–47.",
+          "exclude_dates": "Datum (ÅÅÅÅ-MM-DD) då ordinarie tömning inte sker, t.ex. vid helgdagar. Separera med kommatecken.",
+          "extra_dates": "Datum (ÅÅÅÅ-MM-DD) för extra eller flyttade tömningar. Separera med kommatecken."
+        }
+      },
+      "remove_bin": {
+        "title": "Ta bort kärl",
+        "data": {
+          "bins": "Kärl att ta bort"
+        }
+      }
+    },
+    "error": {
+      "invalid_date": "Ogiltigt datum.",
+      "invalid_date_list": "Ange datum som ÅÅÅÅ-MM-DD separerade med kommatecken.",
+      "season_incomplete": "Ange både start- och slutvecka för säsongen, eller lämna båda tomma.",
+      "name_required": "Fältet får inte vara tomt."
+    }
+  },
+  "selector": {
+    "bin_type": {
+      "options": {
+        "fyrfack_1": "Fyrfack 370 L – Kärl 1 (var 14:e dag)",
+        "fyrfack_2": "Fyrfack 370 L – Kärl 2 (var 4:e vecka)",
+        "garden": "Trädgårdsavfall 370 L (var 14:e dag, v.12–47)",
+        "food": "Matavfall",
+        "residual": "Restavfall",
+        "other": "Annat"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_collection": {
+        "name": "Nästa tömning"
+      }
+    },
+    "calendar": {
+      "collections": {
+        "name": "Tömningskalender"
+      }
+    }
+  }
+}

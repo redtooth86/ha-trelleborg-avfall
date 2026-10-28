@@ -1,0 +1,138 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Trelleborg Kretslopp och Vatten",
+        "description": "Enter the property address, e.g. \"Östergatan 42 ANDERSLÖV\". Then add the bins in your subscription.",
+        "data": {
+          "address": "Property (address)"
+        }
+      },
+      "bin_type": {
+        "title": "Choose bin type",
+        "data": {
+          "bin_type": "Bin type"
+        }
+      },
+      "bin": {
+        "title": "Bin {count}",
+        "description": "Enter when the bin is emptied. Values are prefilled from Trelleborg's standard subscriptions and can be changed.",
+        "data": {
+          "name": "Name",
+          "reference_date": "A collection date",
+          "interval_weeks": "Collection interval",
+          "season_start_week": "Season starts (week)",
+          "season_end_week": "Season ends (week)",
+          "exclude_dates": "Cancelled collections",
+          "extra_dates": "Extra collections"
+        },
+        "data_description": {
+          "reference_date": "Pick any day the bin is emptied (e.g. the last or next collection). Weekday and rhythm are derived from it.",
+          "interval_weeks": "Weeks between collections, e.g. 2 for every other week or 4 for every fourth week.",
+          "season_start_week": "Leave empty if the bin is collected all year. Garden waste in Trelleborg: weeks 12–47.",
+          "season_end_week": "Leave empty if the bin is collected all year. Garden waste in Trelleborg: weeks 12–47.",
+          "exclude_dates": "Dates (YYYY-MM-DD) when the regular collection does not happen, e.g. holidays. Comma separated.",
+          "extra_dates": "Dates (YYYY-MM-DD) for extra or moved collections. Comma separated."
+        }
+      },
+      "more": {
+        "title": "More bins?",
+        "description": "Added bins: {bins}",
+        "menu_options": {
+          "bin_type": "Add bin",
+          "finish": "Done"
+        }
+      }
+    },
+    "error": {
+      "invalid_date": "Invalid date.",
+      "invalid_date_list": "Enter dates as YYYY-MM-DD separated by commas.",
+      "season_incomplete": "Enter both start and end week for the season, or leave both empty.",
+      "name_required": "This field cannot be empty."
+    },
+    "abort": {
+      "already_configured": "This property is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Manage bins",
+        "menu_options": {
+          "add_bin": "Add bin",
+          "select_edit": "Edit bin",
+          "remove_bin": "Remove bins"
+        }
+      },
+      "add_bin": {
+        "title": "Choose bin type",
+        "data": {
+          "bin_type": "Bin type"
+        }
+      },
+      "select_edit": {
+        "title": "Edit bin",
+        "data": {
+          "id": "Bin"
+        }
+      },
+      "bin": {
+        "title": "Bin",
+        "description": "Enter when the bin is emptied. Values are prefilled from Trelleborg's standard subscriptions and can be changed.",
+        "data": {
+          "name": "Name",
+          "reference_date": "A collection date",
+          "interval_weeks": "Collection interval",
+          "season_start_week": "Season starts (week)",
+          "season_end_week": "Season ends (week)",
+          "exclude_dates": "Cancelled collections",
+          "extra_dates": "Extra collections"
+        },
+        "data_description": {
+          "reference_date": "Pick any day the bin is emptied (e.g. the last or next collection). Weekday and rhythm are derived from it.",
+          "interval_weeks": "Weeks between collections, e.g. 2 for every other week or 4 for every fourth week.",
+          "season_start_week": "Leave empty if the bin is collected all year. Garden waste in Trelleborg: weeks 12–47.",
+          "season_end_week": "Leave empty if the bin is collected all year. Garden waste in Trelleborg: weeks 12–47.",
+          "exclude_dates": "Dates (YYYY-MM-DD) when the regular collection does not happen, e.g. holidays. Comma separated.",
+          "extra_dates": "Dates (YYYY-MM-DD) for extra or moved collections. Comma separated."
+        }
+      },
+      "remove_bin": {
+        "title": "Remove bins",
+        "data": {
+          "bins": "Bins to remove"
+        }
+      }
+    },
+    "error": {
+      "invalid_date": "Invalid date.",
+      "invalid_date_list": "Enter dates as YYYY-MM-DD separated by commas.",
+      "season_incomplete": "Enter both start and end week for the season, or leave both empty.",
+      "name_required": "This field cannot be empty."
+    }
+  },
+  "selector": {
+    "bin_type": {
+      "options": {
+        "fyrfack_1": "Four-compartment 370 L – Bin 1 (every 2 weeks)",
+        "fyrfack_2": "Four-compartment 370 L – Bin 2 (every 4 weeks)",
+        "garden": "Garden waste 370 L (every 2 weeks, weeks 12–47)",
+        "food": "Food waste",
+        "residual": "Residual waste",
+        "other": "Other"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_collection": {
+        "name": "Next collection"
+      }
+    },
+    "calendar": {
+      "collections": {
+        "name": "Collection calendar"
+      }
+    }
+  }
+}
